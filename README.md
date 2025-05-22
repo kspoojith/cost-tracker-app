@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# 💸 Cost Tracker App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive cost tracking web application that helps users monitor their expenses efficiently through interactive charts and a clean UI.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- 📊 **Visual Expense Tracking**: Dynamic pie charts for:
+  - Item vs. Other Costs
+  - Category-wise Cost Breakdown
+  - Monthly Spending Trends
+- 🔐 **Authentication**:
+  - Email/password login
+  - Google Sign-in (JWT based with cookie storage)
+- 🛠️ **Real-time Data**:
+  - Firebase Firestore integration for secure, cloud-based cost storage
+  - Realtime fetching and aggregation of user-specific costs
+- 🎨 **Beautiful UI**:
+  - Chakra UI for accessible and responsive design
+  - Custom theme toggle (light/dark mode)
+- 🌐 **Redux State Management**:
+  - Global user authentication state handling
+- ⚙️ **Firebase Setup**:
+  - Firestore collections: `/users/{uid}/items`, `/users/{uid}/otherCosts`
+  - Secure user-based data access
 
-### `npm start`
+---
+## 📷 Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="screenshots/dashboard.png" alt="Dashboard Screenshot" width="100%"/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧱 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Tech         | Description                              |
+|--------------|------------------------------------------|
+| React        | Frontend UI Framework                    |
+| Chakra UI    | Component Library & Styling              |
+| Firebase     | Authentication & Firestore Database      |
+| Redux        | State Management                         |
+| Recharts     | Data Visualization (Pie/Bar/Line Charts) |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Folder Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+src/
+│
+├── components/
+│ ├── CostChart.jsx # Pie chart for Items vs Other Costs
+│ ├── CategoryChart.jsx # Pie chart for cost categories (coming)
+│ ├── MonthlyChart.jsx # Bar/line chart for monthly trends (coming)
+│
+├── pages/
+│ ├── Dashboard.jsx # Main dashboard with charts
+│ └── Login.jsx # Login page
+│
+├── redux/
+│ ├── authSlice.js # Redux slice for auth state
+│ └── store.js # Redux store setup
+│
+├── firebase.js # Firebase config and initialization
+└── App.jsx # Main app entry
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧑‍💻 Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clone the repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/your-username/cost-tracker.git
+cd cost-tracker
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+###2. Install dependencies
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm install
+```
